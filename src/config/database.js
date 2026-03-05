@@ -3,8 +3,8 @@ const mysql = require('mysql2/promise');
 let config = {
     port: 3306,
     user: 'root',
-    password: 'qwer1234@',
-    database: 'Diary_DEV',
+    password: '0000',
+    database: 'Inventory_DEV',
     connectionLimit: 30,
 };
 

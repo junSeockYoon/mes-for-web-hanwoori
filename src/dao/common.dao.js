@@ -12,8 +12,10 @@ const format = { language: 'sql', indent: '  ' };
 // __dirname은 현재 파일의 경로이며, '/mapper/main.xml' 파일을 로딩합니다.
 // 이렇게 로딩된 SQL문들은 메모리에 저장되어 빠르게 찾아 쓸 수 있습니다.
 mybatisMapper.createMapper([
+    __dirname + '/mapper/auth.xml',
     __dirname + '/mapper/main.xml', 
 ]);
+
 
 /**
  * 범용 DAO 함수
@@ -86,6 +88,7 @@ const commonDao = async (mapperId, sqlId, params) => {
 // 서비스 계층에서 mapperId를 쉽게 사용할 수 있도록 네임스페이스를 상수로 정의합니다.
 const mapper = {
     MAIN: "main",
+    Auth: "auth",
 }
 
 // 다른 파일에서 commonDao 함수와 mapper 객체를 사용할 수 있도록 export 합니다.
