@@ -9,7 +9,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "간단한 MES 웹 서버 프로젝트입니다. Node.js + Express 기반으로 동작하며, EJS 템플릿으로 화면을 렌더링합니다.",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
@@ -21,5 +21,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junSeockYoon/mes-for-web-hanwoori.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/junSeockYoon/mes-for-web-hanwoori/issues"
+  },
+  "homepage": "https://github.com/junSeockYoon/mes-for-web-hanwoori#readme"
 }
