@@ -88,7 +88,7 @@ const commonDao = async (mapperId, sqlId, params) => {
 // 서비스 계층에서 mapperId를 쉽게 사용할 수 있도록 네임스페이스를 상수로 정의합니다.
 const mapper = {
     MAIN: "main",
-    Auth: "auth",
+    AUTH: "auth",
 }
 
 // 다른 파일에서 commonDao 함수와 mapper 객체를 사용할 수 있도록 export 합니다.

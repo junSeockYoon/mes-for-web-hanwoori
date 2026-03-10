@@ -7,5 +7,6 @@
         select 
             user_id
         FROM User
-        WHERE EMAIL = #{email} and PW = #{pw}
+        WHERE EMAIL = #{id} and PW = #{password}
+    </select>
 </mapper>
