@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sldfjskd</title>
-    <link rel="stylesheet" href="/src/css/main.css">
+    <title>재고 관리 시스템</title>
+    <link rel="stylesheet" href="/css/main.css">
     <script src="/src/js/main.js"></script>
 </head>
 <body>
-    <div class="container" style="display: flex; justify-content: space-between;">
-        <div class="box" style="width: 30%; height: 100%; background-color: #f0f0f0; font-size: 25px;">
+    <div class="page">
+        <header>
+                <h2>
+                    <img src="/images/icons/mainLogo.png" class="mainLogo"><a href="#">재고 관리 시스템</a>
+                </h2>
+                <nav>
+                    <ul>
+                        <li><a>대시보드</a></li>
+                        <li><a>제품관리</a></li>
+                        <li><a>재고관리</a></li>
+                    </ul>
+                </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="box">
             <br>도움 많이 될거야</br>
             <br>오늘 스트레스 많이 받을거야 </br>
             <br>쉴래? 근데 남들은 안쉬어</br>
-        </div>
-        <div class="box" style="width: 30%; height: 100%; background-color: #f0f0f0; font-size: 25px;">
-            <br>도움 많이 될거야</br>
-            <br>오늘 스트레스 많이 받을거야 </br>
-            <br>쉴래? 근데 남들은 안쉬어</br>
-        </div>
-        <div class="box" style="width: 30%; height: 100%; background-color: #f0f0f0; font-size: 25px;">
-            <br>도움 많이 될거야</br>
-            <br>오늘 스트레스 많이 받을거야 </br>
-            <br>쉴래? 근데 남들은 안쉬어</br>
+            <button type="button" class="product" onclick="location.href='/product/product'">제품관리</button>
         </div>
     </div>
 </body>
