@@ -9,4 +9,10 @@
         FROM User
         WHERE EMAIL = #{id} and PW = #{password}
     </select>
+
+    <insert id="userJoin">
+        insert into user (EMAIL, PW) values {
+            #{id}, #{password}
+        }
+    </insert>
 </mapper>

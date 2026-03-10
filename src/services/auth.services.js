@@ -11,6 +11,16 @@ async function login(params) {
     }
 }
 
+async function join(params) {
+    try {
+        const result = await commonDao(mapper.AUTH, 'userJoin', params);
+
+        return result;
+    } catch (error) {
+        throw error
+    }
+}
 module.exports = {
-    login
+    login,
+    join
 }

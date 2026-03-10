@@ -17,6 +17,12 @@ const router = express.Router();
 
  router.post('/api/login', authController.loginPost);
 
+
+ // 회원가입 페이지
+ router.get('/join', authController.join);
+
+ router.post('/api/join', authController.joinPost);
+
  
  // 이 라우터를 외부로 내보내 상위 라우터 (index.js)에서 사용
  module.exports = router;
