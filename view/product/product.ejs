@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품관리</title>
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <div class="box" style="width: 100%; height: 100%; background-color: #f0f0f0; font-size: 25px;">
+           <table>
+                <thead>
+                    <tr>
+                        <th>제품명</th>
+                        <th>카테고리</th>
+                        <th>가격</th>
+                        <th>재고</th>
+                        <th>상태</th>
+                        <th>작업</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(i = 0; i < result.length; i++){ %>
+                    <tr>
+                        <td><%= result[i].prodName %></td>
+                        <td>전자제품</td>
+                        <td><%= result[i].price %></td>
+                        <td><%= result[i].count %></td>
+                        <td>재고충분</td>
+                        <td>수정 삭제</td>
+                    </tr>
+                    <% } %>
+                </tbody>
+           </table>
+        </div>
+    </div>
+</body>
+</html>

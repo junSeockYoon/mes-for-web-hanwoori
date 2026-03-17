@@ -14,6 +14,7 @@ const format = { language: 'sql', indent: '  ' };
 mybatisMapper.createMapper([
     __dirname + '/mapper/auth.xml',
     __dirname + '/mapper/main.xml', 
+    __dirname + '/mapper/product.xml', 
 ]);
 
 
@@ -89,6 +90,7 @@ const commonDao = async (mapperId, sqlId, params) => {
 const mapper = {
     MAIN: "main",
     AUTH: "auth",
+    PRODUCT: "product",
 }
 
 // 다른 파일에서 commonDao 함수와 mapper 객체를 사용할 수 있도록 export 합니다.

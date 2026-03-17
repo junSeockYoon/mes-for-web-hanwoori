@@ -63,9 +63,18 @@ app.use('/', routes);
 // ========================================
 
 // 지정된 포트에서 서버 시작
-app.listen(port, () => {
+app.get('/', (req, res) => {
+    // views 폴더 안에 있는 main.ejs 파일을 불러온다
+    res.render('main'); 
+});
+
+app.listen(port, async () => {
     // 서버가 성공적으로 시작되면 실행되는 콜백 함수
     console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
+    // 서버 실행 하면서 인터넷 창을 바로 열기 위한 함수
+    // open 라이브러리 사전 설치 후 사용
+    const open = (await import('open')).default;
+    await open(`http://localhost:${port}`);
 }).on('error', (err) => {
     // 서버 시작 중 오류가 발생하면 실행되는 이벤트 핸들러
     console.error('서버 시작 오류:', err);

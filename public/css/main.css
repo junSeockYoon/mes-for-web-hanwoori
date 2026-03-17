@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+.page {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainBoard{
+    margin-left: 20px;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.mainLogo {
+    width: 35px;
+    margin-left: 35px;
+}
+
+.mainContents {
+    display: flex;
+    gap: 40px;
+    margin-right: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 30%;
+    height: 100%;
+    font-size: 25px;
+}
