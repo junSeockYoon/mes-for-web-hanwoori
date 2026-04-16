@@ -15,6 +15,7 @@ const router = express.Router();
  ****************************************************************************************/
 // 제품관리 페이지: 메뉴 선택 화면 (제품과 카테고리 관리)
 router.get('/product', productController.index);
+router.get('/category', productController.category);
 
 /****************************************************************************************
  *!                                     A P I

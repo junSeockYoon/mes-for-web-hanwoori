@@ -10,4 +10,10 @@
             count
         FROM product;
     </select>
+
+    <select id="categoryList">
+        SELECT
+            cate_name
+        FROM category;
+    </select>
 </mapper>

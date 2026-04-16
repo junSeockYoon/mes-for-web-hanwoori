@@ -9,7 +9,7 @@ const { prodService } = require('../services');
 async function index(req, res) {
     try {
         const result = await prodService.prodList();
-        console.log(result);
+        // console.log(result);
         res.render('product/product', {result});
     } catch (error) {
         console.error('=== 재고관리 페이지 에러 ===');
@@ -18,6 +18,19 @@ async function index(req, res) {
     }
 }
 
+async function category(req, res) {
+    try {
+        const result = await prodService.categoryList();
+        // console.log(result);
+        res.render('product/category', {result});
+    } catch (error) {
+        console.error('=== 재고관리 페이지 에러 ===');
+        console.error(error);
+        res.status(500).send('서버 오류가 발생했습니다.');
+    }
+}
+
 module.exports = {
-    index
+    index,
+    category
 };

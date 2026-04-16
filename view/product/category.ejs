@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/product.css">
-    <script type="text.javascript" src="public/javascripts/product.js"></script>
+    <script src=""></script>
 </head>
     <div class="prodContainer">
         <div class="prodBox">
@@ -12,13 +12,13 @@
                 <p>제품과 카테고리를 관리할 수 있습니다</p>
                 <div class="prodButton">
                     <a href="/product/product" >
-                        <div class="btProd on" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="btProd" style="display: flex; align-items: center; justify-content: center;">
                             <img src="/images/icons/mainLogo.png" class="btProdLogo"> 
                             <p>제품목록</p> 
                         </div>
                      </a>
                     <a href="/product/category" >
-                        <div class="btCate" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="btCate on" style="display: flex; align-items: center; justify-content: center;">
                             <img src="/images/icons/category.png" class="btCateLogo">
                             <p>카테고리관리</p>
                         </div>
@@ -26,39 +26,26 @@
                 </div>
             </div>
             <div class="serchContainer">
-                <!-- 모달 띄우기 버튼 시작 -->
-                <button type="button" id="serchButton" onclick="alert('hey!')">
-                    + 제품추가
-                </button>
-                <!-- 모달 띄우기 버튼 끝 -->
-            </div>
-            <!-- 모달 창 감싸는 div 시작 -->
-            <div id="modalWrap">
-                <div id="modalBody">
-                    <span id="closeBtn">&times;</span>
-                    <p>모달창내용</p>
+                <div class="search">
+                    <input type="text" placeholder="새 카테고리 이름">
+                </div>
+                <div class="serchButton">
+                 + 카테고리 추가
                 </div>
             </div>
-            <!-- 모달 창 감싸는 div 끝 -->
             <div class="tableBox">
                 <table>
                     <thead>
                         <tr>
-                            <th>제품명</th>
-                            <th>카테고리</th>
-                            <th>가격</th>
-                            <th>재고</th>
-                            <th>상태</th>
+                            <th>카테고리명</th>
+                            <th>제품수</th>
                             <th style="text-align: right;">작업</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% for(i = 0; i < result.length; i++){ %>
                         <tr>
-                            <td><%= result[i].prodName %></td>
-                            <td>전자제품</td>
-                            <td><%= result[i].price %></td>
-                            <td><%= result[i].count %></td>
+                            <td><%= result[i].cateName %></td>
                             <td>재고충분</td>
                             <td style="text-align: right;">수정 삭제</td>
                         </tr>

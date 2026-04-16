@@ -10,18 +10,31 @@
     font-size: 25px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
 }
-
+.tableBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 table{
     margin-top:250px;
     border: 1px solid #000;
     border-radius: 20px;
-    width: 1200px;
-    margin: 50 auto;
+    width: 80%;
+    max-width: 1825px;
+    margin-top: 60px;
+    justify-content: center;
 }
 
 td{
     border-bottom: 1px solid #000;
+    text-align: left;
+}
+
+tr{
+    text-align: left;
 }
 
 p{
@@ -33,26 +46,90 @@ p{
     background-color: #ececf0;
     border-radius: 15px;
     text-align: center;
-    padding-bottom: 5px;
+    padding: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.btProd{
-    font-size: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
+.btProd, .btCate{
+    font-size: 16px;
+    background-color: #ececf0;
+    border-radius: 15px;
     text-align: center;
-
+    height: 30px;
+    padding: 5px;
 }
 
-.btCate{
-    font-size: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    text-align: center;
-
+.on {
+    background-color: #fff;
 }
 
-.btProdLogo{
+.btProdLogo, .btCateLogo{
     width: 25px;
     height: 25px;
+    margin: 5px;
+}
+
+.search {
+  position: relative;
+  width: 300px;
+  margin-right: 40px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.serchContainer{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 40px;
+}
+
+#serchButton{
+    background-color: black;
+    color: #fff;
+    width: 120px;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#modalWrap {
+  position: fixed; /* 화면에 고정 */
+  z-index: 1; /* 상위에 위치 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경색 */
+  display: none; /* 초기에는 숨김 */
+}
+
+#modalBody {
+  width: 500px;
+  height: 300px;
+  padding: 30px 30px;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background-color: #fff;
+}
+
+#closeBtn {
+  float: right;
+  font-weight: bold;
+  color: #777;
+  font-size: 25px;
+  cursor: pointer;
 }
