@@ -73,6 +73,14 @@
   margin-right: 40px;
 }
 
+input {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
 .serchContainer{
     display: flex;
     justify-content:flex-end;
@@ -106,12 +114,11 @@
 
 #modalBody {
   width: 500px;
-  height: 500px;
+  height: 600px;
   padding: 30px 30px;
   margin: 0 auto;
   border: 1px solid #777;
   background-color: #fff;
-  border-radius: 15px;
 }
 
 #closeBtn {
@@ -121,40 +128,3 @@
   font-size: 25px;
   cursor: pointer;
 }
-
-.newProdct p{
-    font-size: 15px;
-    margin: 3px;
-}
-
-.newProdct table{
-    height: 100%;
-    width: 100%;
-    border-spacing: 0px;
-}
- .newProdct td{
-    padding: 0px;
- }
-
- .newProdct input{
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-    background-color: #f3f3f5;
-    outline: none;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 15px;
- }
-
- .newProdct textarea{
-   height: 70px;
-   border-radius: 5px;
-   border: 1px solid #bbb;
-   background-color: #f3f3f5;
-   outline: none;
-   padding-left: 5px;
-   padding-right: 5px;
-   font-size: 15px;
- }
-

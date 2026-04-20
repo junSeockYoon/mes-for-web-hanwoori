@@ -3,31 +3,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/product.css">
-    <script type="text.javascript" src="public/javascripts/product.js"></script>
+    <!-- <script type="text.javascript" src="/javascripts/product.js"></script> -->
 </head>
     <div class="prodContainer">
         <div class="prodBox">
             <div style="height: 50%;">
                 <h3>제품 관리</h3>
-                <p>제품과 카테고리를 관리할 수 있습니다</p>
+                <p style=" font-size: 18px; color: #5D5D5D;">제품과 카테고리를 관리할 수 있습니다</p>
                 <div class="prodButton">
                     <a href="/product/product" >
                         <div class="btProd on" style="display: flex; align-items: center; justify-content: center;">
                             <img src="/images/icons/mainLogo.png" class="btProdLogo"> 
-                            <p>제품목록</p> 
+                            <p style=" font-size: 18px; color: #5D5D5D;">제품목록</p> 
                         </div>
                      </a>
                     <a href="/product/category" >
                         <div class="btCate" style="display: flex; align-items: center; justify-content: center;">
                             <img src="/images/icons/category.png" class="btCateLogo">
-                            <p>카테고리관리</p>
+                            <p style=" font-size: 18px; color: #5D5D5D;">카테고리관리</p>
                         </div>
                     </a>  
                 </div>
             </div>
             <div class="serchContainer">
                 <!-- 모달 띄우기 버튼 시작 -->
-                <button type="button" id="serchButton" onclick="alert('hey!')">
+                <button type="button" id="serchButton">
                     + 제품추가
                 </button>
                 <!-- 모달 띄우기 버튼 끝 -->
@@ -36,7 +36,36 @@
             <div id="modalWrap">
                 <div id="modalBody">
                     <span id="closeBtn">&times;</span>
-                    <p>모달창내용</p>
+                    <p style="font-size: 30px; font-weight: bolder; margin-top: 0px; margin-bottom: 10px;">새 제품 추가</p>
+                    <p style=" font-size: 18px; color: #5D5D5D; margin-top: 0px;">새로운 제품 정보를 입력합니다. 완료되면 저장 버튼을 클릭하세요.</p>
+                    <div class="newProdct">
+                        <form action="#">
+                            <table>
+                                <tr><td colspan="2"><p>제품명 *</p></td></tr>
+                                <tr><td colspan="2"><input type="text" placeholder="예: 노트북" style="width: 95%;"></td></tr>
+                                <tr><td colspan="2"><p>카테고리 *</p></td></tr>
+                                <tr><td colspan="2"><select>
+                                    <option>전자제품</option>
+                                    <option>가구</option>
+                                    <option>사무용품</option>
+                                    <option>생활용품</option>
+                                </select></td></tr>
+                                <tr>
+                                    <td><p>가격 (원) *</p></td>
+                                    <td><p>재고 수량 *</p></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" placeholder="0" style="width: 90%;"></td>
+                                    <td><input type="text" placeholder="0" style="width: 90%;"></td>
+                                </tr>
+                                <tr><td colspan="2"><p>설명</p></td></tr>
+                                <tr><td colspan="2"><textarea placeholder="제품에 대한 설명을 입력하세요"
+                                    row="100" cols="58"></textarea></td></tr>
+                            </table>
+                            <button type="button">취소</button>
+                            <button type="submit">저장</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <!-- 모달 창 감싸는 div 끝 -->
@@ -70,3 +99,24 @@
     </div>
 </body>
 </html>
+<script>
+const btn = document.getElementById("serchButton");
+const modal = document.getElementById("modalWrap");
+const closeBtn = document.getElementById("closeBtn");
+
+
+btn.onclick = function () {
+//   alert('hey');
+   modal.style.display = "block"; // 버튼을 클릭하면 모달을 보이게 함
+};
+
+ closeBtn.onclick = function () {
+   modal.style.display = "none"; // 모달을 닫는 버튼(X)을 클릭하면 모달을 숨김
+ };
+
+ window.onclick = function (event) {
+   if (event.target == modal) {
+     modal.style.display = "none"; // 모달 외부를 클릭하면 모달을 숨김
+   }
+ };
+</script>
