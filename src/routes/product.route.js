@@ -21,6 +21,8 @@ router.get('/category', productController.category);
  *!                                     A P I
  *  데이터 변경/조회용 API: JSON 응답을 주거나 리다이렉트합니다.
  ****************************************************************************************/
+router.post('/saveProduct', productController.saveProduct);
+router.post('/cateName', productController.cateName);
 
  module.exports = router;
 

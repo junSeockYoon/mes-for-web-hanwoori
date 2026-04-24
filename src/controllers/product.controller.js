@@ -9,7 +9,6 @@ const { prodService } = require('../services');
 async function index(req, res) {
     try {
         const result = await prodService.prodList();
-        // console.log(result);
         res.render('product/product', {result});
     } catch (error) {
         console.error('=== 재고관리 페이지 에러 ===');
@@ -30,7 +29,37 @@ async function category(req, res) {
     }
 }
 
+async function saveProduct(req, res) {
+    try {
+        let params = {
+            ...req.body
+        }
+        const result = await prodService.saveProduct(params);
+        // console.log(params);
+    } catch (error) {
+        console.error('=== 재고관리 페이지 에러 ===');
+        console.error(error);
+        res.status(500).send('서버 오류가 발생했습니다.');
+    }
+}
+
+async function cateName(req, res) {
+    try {
+        let params = {
+            ...req.body
+        }
+        const result = await prodService.cateName(params);
+        console.log(params);
+    } catch (error) {
+        console.error('=== 재고관리 페이지 에러 ===');
+        console.error(error);
+        res.status(500).send('서버 오류가 발생했습니다.');
+    }
+}
+
 module.exports = {
     index,
-    category
+    category,
+    saveProduct,
+    cateName
 };

@@ -39,27 +39,27 @@
                     <p style="font-size: 30px; font-weight: bolder; margin-top: 0px; margin-bottom: 10px;">새 제품 추가</p>
                     <p style=" font-size: 18px; color: #5D5D5D; margin-top: 0px;">새로운 제품 정보를 입력합니다. 완료되면 저장 버튼을 클릭하세요.</p>
                     <div class="newProdct">
-                        <form action="#">
+                        <form action="/product/saveProduct" method="post">
                             <table>
                                 <tr><td colspan="2"><p>제품명 *</p></td></tr>
-                                <tr><td colspan="2"><input type="text" placeholder="예: 노트북" style="width: 95%;"></td></tr>
+                                <tr><td colspan="2"><input type="text" placeholder="예: 노트북" style="width: 95%;" name="prodName" id="prodName"></td></tr>
                                 <tr><td colspan="2"><p>카테고리 *</p></td></tr>
-                                <tr><td colspan="2"><select>
-                                    <option>전자제품</option>
-                                    <option>가구</option>
-                                    <option>사무용품</option>
-                                    <option>생활용품</option>
+                                <tr><td colspan="2"><select size="4" name="category">
+                                    <option value="electronics" selected>전자제품</option>
+                                    <option value="furniture">가구</option>
+                                    <option value="officeSupplies">사무용품</option>
+                                    <option value="dailySupplies">생활용품</option>
                                 </select></td></tr>
                                 <tr>
                                     <td><p>가격 (원) *</p></td>
                                     <td><p>재고 수량 *</p></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" placeholder="0" style="width: 90%;"></td>
-                                    <td><input type="text" placeholder="0" style="width: 90%;"></td>
+                                    <td><input type="text" placeholder="0" style="width: 90%;" name="price" id="price"></td>
+                                    <td><input type="text" placeholder="0" style="width: 90%;" name="count" id="count"></td>
                                 </tr>
                                 <tr><td colspan="2"><p>설명</p></td></tr>
-                                <tr><td colspan="2"><textarea placeholder="제품에 대한 설명을 입력하세요"
+                                <tr><td colspan="2"><textarea name="note" placeholder="제품에 대한 설명을 입력하세요"
                                     row="100" cols="58"></textarea></td></tr>
                             </table>
                             <button type="button">취소</button>

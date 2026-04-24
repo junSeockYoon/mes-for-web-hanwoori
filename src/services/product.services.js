@@ -19,8 +19,27 @@ const categoryList = async () => {
     }
 }
 
+async function saveProduct(params) {
+    try {
+        const result = await commonDao(mapper.PRODUCT, 'saveProduct', params);
+        return result;
+    } catch (error) {
+        throw error;
+    }
+}
+
+async function cateName(params) {
+    try {
+        const result = await commonDao(mapper.PRODUCT, 'cateName', params);
+        return result;
+    } catch (error) {
+        throw error;
+    }
+}
 
 module.exports = {
     prodList,
-    categoryList
+    categoryList,
+    saveProduct,
+    cateName
 }

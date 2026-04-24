@@ -16,4 +16,14 @@
             cate_name
         FROM category;
     </select>
+
+    <insert id="saveProduct">
+        insert into product (prod_name, price, note, count)
+        values (#{prodName}, #{price}, #{note}, #{count});
+    </insert>
+
+    <insert id="cateName">
+        insert into category (cate_name)
+        values (#{cateName});
+    </insert>
 </mapper>
