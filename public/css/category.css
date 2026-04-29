@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     background-color: #f9fafb;
+    height: 100vh;
 }
 
 .prodBox{
     width: 100%;
-    height: 100%;
+    height: 80%;
     font-size: 25px;
     display: flex;
     justify-content: center;
@@ -15,26 +16,27 @@
 }
 .tableBox{
     display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.tableBox table{
-    margin-top:250px;
-    border: 1px solid #000;
+    width: 1350px;
+    border: 1px solid #bbb;
     border-radius: 20px;
-    width: 80%;
-    max-width: 1825px;
-    margin-top: 60px;
+    overflow: hidden;
     justify-content: center;
+    margin: auto;
 }
 
-.tableBox td{
-    border-bottom: 1px solid #000;
-    text-align: left;
+.tableBox table{
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-style: hidden;
 }
 
-.tableBox tr{
+.tableBox th, td{
+    border-bottom: 1px solid #bbb;
     text-align: left;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .prodButton{
@@ -77,14 +79,19 @@
   width: 100%;
   border: 1px solid #bbb;
   border-radius: 8px;
-  font-size: 25px;
-
+  font-size: 20px;
+  padding: 7px;
 }
 
 .serchContainer{
     display: flex;
     justify-content:flex-end;
     margin-right: 40px;
+}
+
+#searchForm{
+    width: 500px;
+    display: flex;
 }
 
 #addButton{
@@ -99,5 +106,24 @@
     cursor: pointer;
 }
 
+#modifyCategory{
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#deleteCategory{
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    color: #FF0000;
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+}
 
 

@@ -37,9 +37,19 @@ async function cateName(params) {
     }
 }
 
+async function deleteCategory(params) {
+    try {
+        const result = await commonDao(mapper.PRODUCT, 'deleteCategory', params);
+        return result;
+    } catch (error) {
+        throw error;
+    }
+}
+
 module.exports = {
     prodList,
     categoryList,
     saveProduct,
-    cateName
+    cateName,
+    deleteCategory
 }

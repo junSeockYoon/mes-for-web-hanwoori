@@ -3,11 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/product.css">
-    <!-- <script type="text.javascript" src="/javascripts/product.js"></script> -->
 </head>
     <div class="prodContainer">
         <div class="prodBox">
-            <div style="height: 50%;">
+            <div>
                 <h3>제품 관리</h3>
                 <p style=" font-size: 18px; color: #5D5D5D;">제품과 카테고리를 관리할 수 있습니다</p>
                 <div class="prodButton">
@@ -89,7 +88,10 @@
                             <td><%= result[i].price %></td>
                             <td><%= result[i].count %></td>
                             <td>재고충분</td>
-                            <td style="text-align: right;">수정 삭제</td>
+                            <td style="text-align: right;">
+                                <button type="button" id="modifyCategory">수정</button>
+                                <button type="button" id="deleteCategory">삭제</button>
+                            </td>
                         </tr>
                         <% } %>
                     </tbody>
@@ -99,24 +101,3 @@
     </div>
 </body>
 </html>
-<script>
-const btn = document.getElementById("serchButton");
-const modal = document.getElementById("modalWrap");
-const closeBtn = document.getElementById("closeBtn");
-
-
-btn.onclick = function () {
-//   alert('hey');
-   modal.style.display = "block"; // 버튼을 클릭하면 모달을 보이게 함
-};
-
- closeBtn.onclick = function () {
-   modal.style.display = "none"; // 모달을 닫는 버튼(X)을 클릭하면 모달을 숨김
- };
-
- window.onclick = function (event) {
-   if (event.target == modal) {
-     modal.style.display = "none"; // 모달 외부를 클릭하면 모달을 숨김
-   }
- };
-</script>

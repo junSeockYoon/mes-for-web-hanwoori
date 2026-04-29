@@ -23,6 +23,7 @@ router.get('/category', productController.category);
  ****************************************************************************************/
 router.post('/saveProduct', productController.saveProduct);
 router.post('/cateName', productController.cateName);
+router.post('/deleteCategory', productController.deleteCategory);
 
  module.exports = router;
 

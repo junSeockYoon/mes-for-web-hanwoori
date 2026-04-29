@@ -13,7 +13,8 @@
 
     <select id="categoryList">
         SELECT
-            cate_name
+            cate_name,
+            cate_id
         FROM category;
     </select>
 
@@ -26,4 +27,9 @@
         insert into category (cate_name)
         values (#{cateName});
     </insert>
+
+    <delete id="deleteCategory">
+        delete from category
+        where cate_id = #{cateId};
+    </delete>
 </mapper>
