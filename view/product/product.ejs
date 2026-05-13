@@ -1,9 +1,7 @@
 <%- include('../header')  %>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/product.css">
-</head>
+
+<link rel="stylesheet" href="/css/product.css">
+
     <div class="prodContainer">
         <div class="prodBox">
             <div>
@@ -26,7 +24,7 @@
             </div>
             <div class="serchContainer">
                 <!-- 모달 띄우기 버튼 시작 -->
-                <button type="button" id="serchButton">
+                <button type="button" id="searchButton" onclick="addProduct()">
                     + 제품추가
                 </button>
                 <!-- 모달 띄우기 버튼 끝 -->
@@ -34,11 +32,11 @@
             <!-- 모달 창 감싸는 div 시작 -->
             <div id="modalWrap">
                 <div id="modalBody">
-                    <span id="closeBtn">&times;</span>
+                    <span id="closeBtn" onclick="closeModal()">&times;</span>
                     <p style="font-size: 30px; font-weight: bolder; margin-top: 0px; margin-bottom: 10px;">새 제품 추가</p>
                     <p style=" font-size: 18px; color: #5D5D5D; margin-top: 0px;">새로운 제품 정보를 입력합니다. 완료되면 저장 버튼을 클릭하세요.</p>
                     <div class="newProdct">
-                        <form action="/product/saveProduct" method="post">
+                        <form action="/product/saveProduct" method="post" onsubmit="beforeCheck()">
                             <table>
                                 <tr><td colspan="2"><p>제품명 *</p></td></tr>
                                 <tr><td colspan="2"><input type="text" placeholder="예: 노트북" style="width: 95%;" name="prodName" id="prodName"></td></tr>
@@ -61,7 +59,7 @@
                                 <tr><td colspan="2"><textarea name="note" placeholder="제품에 대한 설명을 입력하세요"
                                     row="100" cols="58"></textarea></td></tr>
                             </table>
-                            <button type="button">취소</button>
+                            <button type="button" onclick="closeModal()">취소</button>
                             <button type="submit">저장</button>
                         </form>
                     </div>
